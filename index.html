@@ -2,77 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Thank You for Visiting Saikang Medical</title>
 
   <style>
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: #f2f4f7;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f8fa;
       color: #333;
     }
 
-    .page {
-      max-width: 480px;
+    .container {
+      max-width: 900px;
       margin: 0 auto;
       background: #ffffff;
-      min-height: 100vh;
-      padding: 30px 22px 40px;
-      box-sizing: border-box;
+      padding: 40px 30px 50px;
     }
 
     .logo {
       text-align: center;
-      margin-bottom: 26px;
+      margin-bottom: 30px;
     }
 
     .logo img {
-      max-width: 200px;
+      max-width: 220px;
     }
 
     h1 {
-      font-size: 22px;
       text-align: center;
-      margin-bottom: 10px;
-    }
-
-    .date {
-      text-align: center;
-      font-size: 14px;
-      color: #888;
-      margin-bottom: 22px;
+      font-size: 28px;
+      margin-bottom: 20px;
     }
 
     .intro {
-      font-size: 15px;
-      line-height: 1.7;
       text-align: center;
-      margin-bottom: 28px;
-      color: #444;
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 720px;
+      margin: 0 auto 40px;
+    }
+
+    .photo {
+      text-align: center;
+      margin: 40px 0;
     }
 
     .photo img {
       width: 100%;
+      max-width: 760px;
       border-radius: 6px;
-      margin: 26px 0;
     }
 
     .buttons {
-      margin-top: 24px;
+      text-align: center;
+      margin-top: 40px;
     }
 
     .btn {
-      display: block;
-      width: 100%;
-      padding: 14px;
-      margin-bottom: 14px;
-      border-radius: 5px;
-      font-size: 15px;
-      text-align: center;
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 26px;
+      border-radius: 4px;
       text-decoration: none;
+      font-size: 15px;
       border: 1px solid #005baa;
       color: #005baa;
+      transition: all 0.2s ease;
     }
 
     .btn.primary {
@@ -80,39 +76,51 @@
       color: #ffffff;
     }
 
+    .btn:hover {
+      opacity: 0.85;
+    }
+
     footer {
-      margin-top: 36px;
-      font-size: 12px;
-      color: #999;
       text-align: center;
+      font-size: 13px;
+      color: #888;
+      margin-top: 50px;
     }
   </style>
 </head>
 
 <body>
 
-<div class="page">
+<div class="container">
 
   <div class="logo">
     <img src="logo.png" alt="Saikang Medical">
   </div>
 
-  <h1 id="title"></h1>
+  <h1 id="title">Thank You for Visiting Saikang Medical</h1>
 
-  <div class="date" id="visitDate"></div>
-
-  <div class="intro" id="intro"></div>
+  <p class="intro" id="intro">
+    It was our great pleasure to welcome you to Saikang Medical.
+    We sincerely appreciate your time, trust, and valuable discussions during your visit.
+    We look forward to strengthening our cooperation and creating more value together.
+  </p>
 
   <div class="photo">
     <img src="visit.jpg" alt="Customer Visit at Saikang Medical">
   </div>
 
   <div class="buttons">
-    <a class="btn primary" href="https://saikangmedical.com/en/catalogues/" target="_blank" id="catalogueBtn"></a>
-    <a class="btn" href="https://saikangmedical.com/en/contact/" target="_blank" id="contactBtn"></a>
+    <a class="btn primary" href="https://saikangmedical.com/en/catalogues/" target="_blank" id="catalogueBtn">
+      Download Product Catalogue
+    </a>
+    <a class="btn" href="https://saikangmedical.com/en/contact/" target="_blank" id="contactBtn">
+      Contact Our Team
+    </a>
   </div>
 
-  <footer id="footer"></footer>
+  <footer id="footer">
+    © Saikang Medical · Dedicated to Better Healthcare
+  </footer>
 
 </div>
 
