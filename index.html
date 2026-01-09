@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>Thank You for Visiting Saikang Medical</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #f2f4f7;
+      color: #333;
+    }
+
+    .page {
+      max-width: 480px;
+      margin: 0 auto;
+      background: #ffffff;
+      min-height: 100vh;
+      padding: 30px 22px 40px;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    .logo img {
+      max-width: 200px;
+    }
+
+    h1 {
+      font-size: 22px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .date {
+      text-align: center;
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 22px;
+    }
+
+    .intro {
+      font-size: 15px;
+      line-height: 1.7;
+      text-align: center;
+      margin-bottom: 28px;
+      color: #444;
+    }
+
+    .photo img {
+      width: 100%;
+      border-radius: 6px;
+      margin: 26px 0;
+    }
+
+    .buttons {
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 14px;
+      border-radius: 5px;
+      font-size: 15px;
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid #005baa;
+      color: #005baa;
+    }
+
+    .btn.primary {
+      background: #005baa;
+      color: #ffffff;
+    }
+
+    footer {
+      margin-top: 36px;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="page">
+
+  <div class="logo">
+    <img src="logo.png" alt="Saikang Medical">
+  </div>
+
+  <h1 id="title"></h1>
+
+  <div class="date" id="visitDate"></div>
+
+  <div class="intro" id="intro"></div>
+
+  <div class="photo">
+    <img src="visit.jpg" alt="Customer Visit at Saikang Medical">
+  </div>
+
+  <div class="buttons">
+    <a class="btn primary" href="https://saikangmedical.com/en/catalogues/" target="_blank" id="catalogueBtn"></a>
+    <a class="btn" href="https://saikangmedical.com/en/contact/" target="_blank" id="contactBtn"></a>
+  </div>
+
+  <footer id="footer"></footer>
+
+</div>
+
+<script>
+  const lang = navigator.language || navigator.userLanguage;
+  const today = new Date();
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+
+  document.getElementById("visitDate").innerText =
+    today.toLocaleDateString(lang, options);
+
+  const content = {
+    en: {
+      title: "Thank You for Visiting Saikang Medical",
+      intro:
+        "It was our great pleasure to welcome you to Saikang Medical. Thank you for taking the time to visit us and for the valuable discussions. We look forward to building a long-term and successful cooperation.",
+      catalogue: "Download Product Catalogue",
+      contact: "Contact Our Team",
+      footer: "© Saikang Medical · Dedicated to Better Healthcare"
+    },
+    es: {
+      title: "Gracias por Visitar Saikang Medical",
+      intro:
+        "Fue un placer recibirle en Saikang Medical. Gracias por tomarse el tiempo de visitarnos y por las valiosas conversaciones. Esperamos construir una cooperación sólida y a largo plazo.",
+      catalogue: "Descargar Catálogo de Productos",
+      contact: "Contactar con Nuestro Equipo",
+      footer: "© Saikang Medical · Comprometidos con una Mejor Atención Médica"
+    },
+    fr: {
+      title: "Merci de Votre Visite chez Saikang Medical",
+      intro:
+        "Ce fut un réel plaisir de vous accueillir chez Saikang Medical. Merci pour votre visite et pour les échanges constructifs. Nous nous réjouissons de développer une coopération durable et fructueuse.",
+      catalogue: "Télécharger le Catalogue Produits",
+      contact: "Contacter Notre Équipe",
+      footer: "© Saikang Medical · Engagés pour une Meilleure Santé"
+    }
+  };
+
+  let langKey = "en";
+  if (lang.startsWith("es")) langKey = "es";
+  if (lang.startsWith("fr")) langKey = "fr";
+
+  document.getElementById("title").innerText = content[langKey].title;
+  document.getElementById("intro").innerText = content[langKey].intro;
+  document.getElementById("catalogueBtn").innerText = content[langKey].catalogue;
+  document.getElementById("contactBtn").innerText = content[langKey].contact;
+  document.getElementById("footer").innerText = content[langKey].footer;
+</script>
+
+</body>
+</html>
